@@ -9,8 +9,10 @@ import java.util.List;
 
 public class Kata4 {
 
-    public static void main(String[] args){
+    public static void main(String[] args) throws IOException{
         Kata4 kata = new Kata4();
+        kata.execute();
+        
     }
     
     private List<Mail> mailList;
@@ -32,6 +34,7 @@ public class Kata4 {
     }
 
     private void output() {
+        
         HistogramDisplay histodisplay = new HistogramDisplay(histogram);
         histodisplay.execute();
     }
