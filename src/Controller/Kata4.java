@@ -11,7 +11,6 @@ public class Kata4 {
 
     public static void main(String[] args){
         Kata4 kata = new Kata4();
-        
     }
     
     private List<Mail> mailList;
