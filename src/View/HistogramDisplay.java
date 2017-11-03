@@ -1,8 +1,9 @@
-package kata3;
+package View;
 
 import java.awt.Dimension;
 import static javafx.scene.input.KeyCode.T;
 import javax.swing.JPanel;
+import Controller.Histogram;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
