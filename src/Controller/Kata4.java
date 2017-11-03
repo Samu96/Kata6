@@ -9,16 +9,33 @@ import java.util.List;
 
 public class Kata4 {
 
-    public static void main(String[] args) throws IOException {
-        String filename = new String(".\\src\\Controller\\emails.txt");
-        List<Mail> mailList = MailListReader.read(filename);
-        Histogram<String> histogram = MailHistogramBuilder.build(mailList);
-        
-        HistogramDisplay histodisplay = new HistogramDisplay(histogram);
-        histodisplay.execute();
-        
-        
+    public static void main(String[] args){
+        Kata4 kata = new Kata4();
         
     }
+    
+    private List<Mail> mailList;
+    private Histogram<String> histogram;
+    public void execute() throws IOException{
+        input();
+        process();
+        output();
+        
+    }
+    
+    private void input() throws IOException {
+        String filename = new String(".\\src\\Controller\\emails.txt");
+        mailList = MailListReader.read(filename);
+    }
+
+    private void process() {
+        histogram = MailHistogramBuilder.build(mailList);
+    }
+
+    private void output() {
+        HistogramDisplay histodisplay = new HistogramDisplay(histogram);
+        histodisplay.execute();
+    }
+   
     
 }
